@@ -1,0 +1,7 @@
+python has built in package called json, which is used to work with json data.
+
+python to json:
+dumps(data) - this is used to convert python object into json string
+
+json -> python:
+loads(data) - this is used to parse json string.

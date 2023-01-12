@@ -1,0 +1,11 @@
+Serializers
+Serializers are responsible for converting complex data such as querysets 
+and model instances to nativ python datatypes(called serialization) that can
+then be easily rendered into JSON, XML, or other content types  which is 
+understandable by Frontend. 
+
+Serializers are also responsible for deserialization which means it allows for
+data to be converted back into complex data types, after first validation in incoming data.
+
+# Serialization
+# Deserialization
