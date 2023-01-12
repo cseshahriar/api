@@ -1,0 +1,41 @@
+Application programming interface(API)
+    # application to application communication
+    # provider -> consumer 
+
+types: 
+ 1. Private - It can be used within the org
+ 2. Partner - It can be used within Business partners
+ 3. Public - It can be used any third party developer
+
+
+
+Web API: 
+    Which is interface for web is called as Web API
+
+works: apps -> web api -> web application -> database
+
+
+REST and REST API:
+    It is an architectural guideline to develop Web API
+    The API which is developed using REST is know as REST API / RESTful
+    Client(Android/browser) -> Web API -> web application -> database
+    # json or xml data formate
+    # request and response
+
+REST API Operations:
+    Operations  Methods           Description
+    Create      -> POST         -> Create/Insert data
+    Read        -> GET          -> Read data
+    Update      -> PUT/PATCH    -> Complete update PUT, Partial update PATCH
+    Delete      -> DELETE       -> Deleting data
+
+
+API Resource:
+
+http://someting.com/api/students
+
+1. Base URL
+2. Naming Convention
+3. Resources of API End-Point
+
+Request -> Response:
