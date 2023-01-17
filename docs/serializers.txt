@@ -8,4 +8,6 @@ Serializers are also responsible for deserialization which means it allows for
 data to be converted back into complex data types, after first validation in incoming data.
 
 # Serialization
+Complex data types -> serialization -> python native data types -> json
 # Deserialization
+json -> python native data types -> complex data types

@@ -1,5 +1,8 @@
-from rest_framework.renderers import JSONRenderer
 from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
 
 from .serializers import StudentSerializer
 from .models import Student
@@ -22,3 +25,13 @@ def student_list(request):
     # json_data = JSONRenderer().render(serializer.data)
     # return HttpResponse(json_data, content_type='application/json')
     return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(['POST'])
+def student_create(request):
+    if request.method == 'POST':
+        serializer = StudentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
